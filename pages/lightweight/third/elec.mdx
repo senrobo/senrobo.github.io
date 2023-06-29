@@ -1,0 +1,93 @@
+import Image from "next/image";
+import { Callout } from "nextra/components";
+
+## Schmatic and Component Selection
+
+### Step-Down Converter
+
+We use TI’s TPS5430 buck converter IC to step down our 12V battery voltage to 5V for Teensy 4.0, ESP32-C3 and OpenMV and 3.3v for everything else
+
+<div>
+  <Image
+    style={{
+      marginTop: "2rem",
+      borderRadius: "0.5rem",
+      display: "block",
+      marginLeft: "auto",
+      marginRight: "auto",
+      width: "50%",
+    }}
+    src="/buckSch.png"
+    alt="buckSch"
+    width={500}
+    height={500}
+  />
+  <a
+    style={{
+      marginTop: "1rem",
+      textAlign: "center",
+      fontFamily: "Times New Roman, Times, serif",
+    }}
+  >
+    Buck Circuit
+  </a>
+</div>
+
+<Callout type="info">
+
+Fun Fact: During our testing phase, we experienced a PSU malfunction resulting in an output of 240V from the wall. Despite this significant overvoltage, the majority of components within our circuit remained operational. Remarkably, our buck converter was able to successfully step down the 240V input to 160V output.
+
+</Callout>
+
+### Kicker Activation Circuit
+
+To facilitate the efficient flow of high voltage and high currents through a circuit, certain components such as Optoisolators, Relays and MOSFETs are commonly employed. During our testing phase, we attempted to utilize Optoisolators, specifically the PC817 Optoisolator, to drive the circuit. However, due to the kicker's requirement of 48V at 2A to function optimally, we experienced repeated instances of Optoisolator failure. Consequently, we made the decision to abandon this approach and instead employ a MOSFET as depicted in the following circuit diagram.
+
+<div>
+  <Image
+    style={{
+      marginTop: "1rem",
+      borderRadius: "0.5rem",
+      display: "block",
+      marginLeft: "auto",
+      marginRight: "auto",
+      width: "50%",
+    }}
+    src="/activationSch.png"
+    alt="activationSch"
+    width={500}
+    height={500}
+  />
+  <a
+    style={{
+      marginTop: "2rem",
+      textAlign: "center",
+      fontFamily: "Times New Roman, Times, serif",
+    }}
+  >
+    Activation Circuit
+  </a>
+</div>
+
+In order to safeguard switching devices such as transistors from potential damage caused by inductive flyback, we used a flyback the 1N5401 diode. The concept underlying a flyback diode is to provide a pathway for the current to flow through once the inductor has been disconnected, thereby preventing any voltage spikes that could otherwise damage the switching device. We also used a RC Snubber circuit to further protect the MOSFET from voltage spikes.
+
+### Motor Drivers
+
+We chose 4 VNH5050AE motor drivers to control our motors because it was a smaller package of our tried and tested VNH5019A Motors which are still serverly overpriced at the time of writing. The Australian team from Brisbane Boys' College Robotics [LJStand](https://ljstand.com/) also used the same motor drivers so we were relatively confident that these motors would work.
+
+However, during our testing phase, we discovered that when paired with power-hungry Joinmax motors, these motor drivers were not well-suited and resulted in significant overheating issues. To address this problem, we had to add passive aluminum heat sinks to the motor drivers to prevent them from overheating.
+
+The rest of our circuits are relatively simple and are not worth mentioning.
+
+## PCB Positioning
+
+During the meticulous design process of our printed circuit board, we took great care in positioning clusters of components in close proximity to one another. For instance, we placed resistors for motor drivers alongside the drivers themselves. This strategic placement served to prevent the intermingling of traces for related parts, thereby streamlining the design process.
+
+In addition, we were intentional in situating these groups of components in close proximity to their intended destinations. For example, we situated the motor drivers directly beneath the motors. This not only reduced width runs, but also ensured that high current cables from the motors would not interfere with other data lines.
+
+## Areas For Improvement
+
+- Change the Capacitor for motor drivers to a higher voltage rating the tantulum one shorted our entire PCB
+- Integrate the 5V and 3.3V buck converters into one PCB
+- Add more silkscreen labels
+- Stop blowing up the first time i run it

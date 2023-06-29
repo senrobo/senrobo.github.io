@@ -1,0 +1,21 @@
+import Image from "next/image";
+
+## Schmatics
+
+The schmatics was still a copy from ours pervious year's robot becuase we did not have the time to learn both mechanical and electrical within a short timespan.
+
+What we removed was the mouse sensor although it will allow the robot to have more precise movements we realise that it was 1. Too difficult to interface and 2. It was very expensive to own one so we ditched the idea allowing more room to place traces on the PCB more efficently.
+
+## PCB Design
+
+Instead of putting most of the components on the top Layer eg. STM32, MUX, we opted to place it on the bottom side of the PCB for easier wiring. Although some of our sneiors are against where by the STM32 might be too close to the ground and will sratch or tear it off, we realise that we gave enough clearance for it to not be a major issue.
+When trying to pursue for more efficent board spacing and layout by trying to cram the wiring into a smaller space, we ended up putting tracks close to each other and vias placing close to huge pads. One good example is our motor driver issue. We had a huge pad for the motor driver and we placed a via right next to it. This caused the motor driver to short out and initally we did not know what the issue was and we kept on burning the VNH5019.
+
+<Image
+  src="/motorDriverVia.png"
+  alt="motorDriverVia"
+  width={500}
+  height={500}
+/>
+
+Here you can see that the pads were so close to the via that it caused a short when the pads is shifted slightly out of alignment.
