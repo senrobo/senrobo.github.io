@@ -1,4 +1,5 @@
 import { Manrope } from "next/font/google";
+import "tailwindcss/tailwind.css";
 
 const roboto = Manrope({ subsets: ["latin"] });
 
