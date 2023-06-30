@@ -1,1 +1,31 @@
+import Link from "next/link";
 
+<div className="w-full grid grid-cols-2 my-4">
+  <div>
+    <h1 className=" my-2 font-extrabold text-4xl">Sentinels</h1>
+    <h2 className="text-basemy-2 ">
+      Hwa Chong Insitution, Singapore — est. 2021
+    </h2>
+    <button className="px-4 py-2 border-2 rounded my-2 font-bold text-lg hover:bg-white duration-300 hover:text-black">
+      <Link href="/about">About Us</Link>
+    </button>
+  </div>
+</div>
+<div className="my-4">
+  <div className="grid grid-cols-2 gap-4">
+    <div>
+      <h1 className="text-2xl font-bold">Soccer Lightweight</h1>
+      <p className="font-semibold">Small but powerful</p>
+      <button className="px-4 py-2 border-2 rounded my-2 font-bold hover:bg-white duration-300 hover:text-black">
+        <Link href="/lightweight">Learn More</Link>
+      </button>
+    </div>
+    <div>
+      <h1 className="text-2xl font-bold">Soccer Open</h1>
+      <p className="font-semibold">Chonky.</p>
+      <button className="px-4 py-2 border-2 rounded my-2 font-bold hover:bg-white duration-300 hover:text-black">
+        <Link href="/lightweight">Learn More</Link>
+      </button>
+    </div>
+  </div>
+</div>
