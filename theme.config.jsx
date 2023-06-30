@@ -17,7 +17,7 @@ export default {
     const { asPath } = useRouter();
     if (asPath !== "/") {
       return {
-        titleTemplate: "%s – Sentinels Robotics",
+        titleTemplate: "%s | Sentinels Robotics",
       };
     }
   },
