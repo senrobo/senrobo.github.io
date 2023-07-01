@@ -2,7 +2,12 @@
   "*": {
     "type": "page"
   },
-  "index": "Home",
+  "index": {
+    "title": "Home",
+    "theme": {
+      "layout": "raw"
+    }
+  },
   "about": "About",
   "lightweight": "Lightweight",
   "open": "Open"
