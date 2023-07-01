@@ -14,9 +14,12 @@ export default {
     content: null,
   },
   useNextSeoProps() {
-    return {
-      titleTemplate: "%s – Sentinels Robotics",
-    };
+    const { asPath } = useRouter();
+    if (asPath !== "/") {
+      return {
+        titleTemplate: "%s – Sentinels Robotics",
+      };
+    }
   },
   head: (
     <>
