@@ -1,6 +1,6 @@
 {
-  "index": "Introduction",
-  "mech": "Mechanical",
-  "elec": "Electrical",
-  "prog": "Programming"
+  "introduction": "Introduction",
+  "mechanical": "Mechanical",
+  "electrical": "Electrical",
+  "programming": "Programming"
 }
