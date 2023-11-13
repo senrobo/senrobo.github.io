@@ -1,0 +1,16 @@
+[
+  {
+    "href": "/",
+    "text": "Home"
+  },
+  {
+    "href": "/blog/",
+    "text": "Blog"
+  },
+  {
+    "href": "https://github.com/senrobo",
+    "rel": "noopener noreferrer",
+    "target": "_blank",
+    "text": "Github"
+  }
+]
