@@ -9,7 +9,7 @@ export default {
         sans: ["InterVariable", "Inter", ...defaultTheme.fontFamily.sans],
       },
       backgroundImage: {
-        hero: "url('../images/hero.jpg')",
+        hero: "url('../images/hero.webp')",
       },
     },
   },
