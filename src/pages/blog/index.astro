@@ -6,7 +6,7 @@ const posts = (await getCollection("blog")).sort(
   (a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf(),
 );
 
-const title = "Blog | Sentinels Robotics";
+const title = "Blog";
 const description =
   "Page where we post our new found knowledge and document the progress of the robot";
 ---
@@ -14,16 +14,14 @@ const description =
 <AppLayout title={title} description={description}>
   <section class="px-6 lg:px-0 mx-auto max-w-3xl text-left mt-12">
     <h1
-      class="mb-6 dark:text-zinc-200 text-zinc-900 text-3xl font-bold tracking-tight sm:text-4xl"
+      class="mb-6 text-zinc-200 text-3xl font-bold tracking-tight sm:text-4xl"
     >
       {title}
     </h1>
-    <p
-      class="max-w-prose mb-10 font-normal dark:text-zinc-400 text-zinc-600 leading-relaxed"
-    >
+    <p class="max-w-prose mb-10 font-normal text-zinc-400 leading-relaxed">
       {description}
     </p>
-    <ul class="flex flex-col gap-8 sm:border-l sm:dark:border-zinc-800">
+    <ul class="flex flex-col gap-8 border-l border-zinc-800">
       {
         posts.map((post) => (
           <BlogCard

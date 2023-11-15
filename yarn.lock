@@ -355,6 +355,11 @@
     "@babel/helper-validator-identifier" "^7.22.20"
     to-fast-properties "^2.0.0"
 
+"@ctrl/tinycolor@^3.6.0":
+  version "3.6.1"
+  resolved "https://registry.yarnpkg.com/@ctrl/tinycolor/-/tinycolor-3.6.1.tgz#b6c75a56a1947cc916ea058772d666a2c8932f31"
+  integrity sha512-SITSV6aIXsuVNV3f3O0f2n/cgyEDWoSqtZMYiAmcsYHydcKrOz3gUxB/iXd/Qf08+IZX4KpgNbvUdMBmWz+kcA==
+
 "@emmetio/abbreviation@^2.3.3":
   version "2.3.3"
   resolved "https://registry.yarnpkg.com/@emmetio/abbreviation/-/abbreviation-2.3.3.tgz#ed2b88fe37b972292d6026c7c540aaf887cecb6e"
@@ -593,6 +598,42 @@
   version "0.19.5"
   resolved "https://registry.yarnpkg.com/@esbuild/win32-x64/-/win32-x64-0.19.5.tgz#faad84c41ba12e3a0acb52571df9bff37bee75f6"
   integrity sha512-czTrygUsB/jlM8qEW5MD8bgYU2Xg14lo6kBDXW6HdxKjh8M5PzETGiSHaz9MtbXBYDloHNUAUW2tMiKW4KM9Mw==
+
+"@expressive-code/core@^0.28.2":
+  version "0.28.2"
+  resolved "https://registry.yarnpkg.com/@expressive-code/core/-/core-0.28.2.tgz#acbe2ca7428ceec0298228a79c8bfcdd8a42240c"
+  integrity sha512-SZASDZb6quhRqYylN6NeCy+ahhGadrOSVRXfmZOJnpoXGpVkYCXCFl2e5b5rHNUZflRK00qHbtkk6CGudNPLQg==
+  dependencies:
+    "@ctrl/tinycolor" "^3.6.0"
+    hast-util-to-html "^8.0.4"
+    hastscript "^7.2.0"
+    postcss "^8.4.21"
+    postcss-nested "^6.0.1"
+
+"@expressive-code/plugin-frames@^0.28.2":
+  version "0.28.2"
+  resolved "https://registry.yarnpkg.com/@expressive-code/plugin-frames/-/plugin-frames-0.28.2.tgz#504328f0491fe772fd165c292bd7d8fe5fc0a7c3"
+  integrity sha512-fYNE0aivB1mBJuZkfesT7L3YQz6PLw0BEBN1xHUWmcm28EvHCx2e7TOj/ozMEvcteVNvTKW8ktfK4nxupGCwdw==
+  dependencies:
+    "@expressive-code/core" "^0.28.2"
+    hastscript "^7.2.0"
+
+"@expressive-code/plugin-shiki@^0.28.2":
+  version "0.28.2"
+  resolved "https://registry.yarnpkg.com/@expressive-code/plugin-shiki/-/plugin-shiki-0.28.2.tgz#6156e416cb5a5e37fde1535ed309122c1428becb"
+  integrity sha512-HrEARCIGcrnmX5tQiGimxjSTkqGkeZxXKl14GgNQ8UjXBgk3H2lynMC70IJgjWlKm3SyWjvFs5ehxfGNKqBYXg==
+  dependencies:
+    "@expressive-code/core" "^0.28.2"
+    shiki "^0.14.1"
+
+"@expressive-code/plugin-text-markers@^0.28.2":
+  version "0.28.2"
+  resolved "https://registry.yarnpkg.com/@expressive-code/plugin-text-markers/-/plugin-text-markers-0.28.2.tgz#c8cccc2147fe105d84daafb64644a9cc9c23759e"
+  integrity sha512-KgBEK2VffFxna55KDikZneJ268RAu69UgtR0dSAON14mjlzB+7Ue7WpaMMXJ0NnJ9imkni0MbvO8HiuwMHvdGQ==
+  dependencies:
+    "@expressive-code/core" "^0.28.2"
+    hastscript "^7.2.0"
+    unist-util-visit-parents "^5.1.3"
 
 "@fontsource-variable/inter@^5.0.15":
   version "5.0.15"
@@ -930,6 +971,11 @@ ansi-regex@^6.0.1:
   resolved "https://registry.yarnpkg.com/ansi-regex/-/ansi-regex-6.0.1.tgz#3183e38fae9a65d7cb5e53945cd5897d0260a06a"
   integrity sha512-n5M855fKb2SsfMIiFFoVrABHJC8QtHwVx+mHWP3QcEqBHYienj5dHSgjbxtC0WEZXYt4wcD6zrQElDPhFuZgfA==
 
+ansi-sequence-parser@^1.1.0:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/ansi-sequence-parser/-/ansi-sequence-parser-1.1.1.tgz#e0aa1cdcbc8f8bb0b5bca625aac41f5f056973cf"
+  integrity sha512-vJXt3yiaUL4UU546s3rPXlsry/RnM730G1+HkpKE012AN0sx1eOrxSu95oKDIonskeLTijMgqWZ3uDEe3NFvyg==
+
 ansi-styles@^3.2.1:
   version "3.2.1"
   resolved "https://registry.yarnpkg.com/ansi-styles/-/ansi-styles-3.2.1.tgz#41fbb20243e50b12be0f04b8dedbf07520ce841d"
@@ -988,6 +1034,13 @@ astring@^1.8.0:
   version "1.8.6"
   resolved "https://registry.yarnpkg.com/astring/-/astring-1.8.6.tgz#2c9c157cf1739d67561c56ba896e6948f6b93731"
   integrity sha512-ISvCdHdlTDlH5IpxQJIex7BWBywFWgjJSVdwst+/iQCoEYnyOaQ95+X1JGshuBjGp6nxKUy1jMgE3zPqN7fQdg==
+
+astro-expressive-code@^0.28.2:
+  version "0.28.2"
+  resolved "https://registry.yarnpkg.com/astro-expressive-code/-/astro-expressive-code-0.28.2.tgz#7e5d0193d66591d572f93cfbb63e8e9c19c65423"
+  integrity sha512-ohiQ/ADJVMDcV4zc+45M9cMXQPLZRneWDbpcs+VY7WCx0mwi8ML3+8VnlaOBlVARw0FxEELe5yHhQzQCZMEDXQ==
+  dependencies:
+    remark-expressive-code "^0.28.2"
 
 astro@^3.5.4:
   version "3.5.4"
@@ -1642,6 +1695,16 @@ expand-template@^2.0.3:
   resolved "https://registry.yarnpkg.com/expand-template/-/expand-template-2.0.3.tgz#6e14b3fcee0f3a6340ecb57d2e8918692052a47c"
   integrity sha512-XYfuKMvj4O35f/pOXLObndIRvyQ+/+6AhODh+OKWj9S9498pHHn/IMszH+gt0fBCRWMNfk1ZSp5x3AifmnI2vg==
 
+expressive-code@^0.28.2:
+  version "0.28.2"
+  resolved "https://registry.yarnpkg.com/expressive-code/-/expressive-code-0.28.2.tgz#c586692d605e30bba56add7fb61a65d681a40dc1"
+  integrity sha512-YexyhdVkow63/dP7/6uU2nLl3NqrTa+nABW/V3dP9owZIZf3M8wWoIy9k2F/BI1dGpPtCXFs6HYlQBIZG26VLQ==
+  dependencies:
+    "@expressive-code/core" "^0.28.2"
+    "@expressive-code/plugin-frames" "^0.28.2"
+    "@expressive-code/plugin-shiki" "^0.28.2"
+    "@expressive-code/plugin-text-markers" "^0.28.2"
+
 extend-shallow@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/extend-shallow/-/extend-shallow-2.0.1.tgz#51af7d614ad9a9f610ea1bafbb989d6b1c56890f"
@@ -1993,7 +2056,7 @@ hast-util-whitespace@^3.0.0:
   dependencies:
     "@types/hast" "^3.0.0"
 
-hastscript@^7.0.0:
+hastscript@^7.0.0, hastscript@^7.2.0:
   version "7.2.0"
   resolved "https://registry.yarnpkg.com/hastscript/-/hastscript-7.2.0.tgz#0eafb7afb153d047077fa2a833dc9b7ec604d10b"
   integrity sha512-TtYPq24IldU8iKoJQqvZOuhi5CyCQRAbvDOX0x1eW6rsHSxa/1i2CCiptNTotGHJ3VoHRGmqiv6/D3q113ikkw==
@@ -2244,6 +2307,11 @@ jsonc-parser@^2.3.0:
   version "2.3.1"
   resolved "https://registry.yarnpkg.com/jsonc-parser/-/jsonc-parser-2.3.1.tgz#59549150b133f2efacca48fe9ce1ec0659af2342"
   integrity sha512-H8jvkz1O50L3dMZCsLqiuB2tA7muqbSg1AtGEkN0leAqGjsUzDJir3Zwr02BhqdcITPg3ei3mZ+HjMocAknhhg==
+
+jsonc-parser@^3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/jsonc-parser/-/jsonc-parser-3.2.0.tgz#31ff3f4c2b9793f89c67212627c51c6394f88e76"
+  integrity sha512-gfFQZrcTc8CnKXp6Y4/CBT3fTc0OVuDofpre4aEeEpSBPV5X5v4+Vmx+8snU7RLPrNHPKSgLxGo9YuQzz20o+w==
 
 kind-of@^6.0.0, kind-of@^6.0.2:
   version "6.0.3"
@@ -3375,7 +3443,7 @@ postcss-value-parser@^4.0.0, postcss-value-parser@^4.2.0:
   resolved "https://registry.yarnpkg.com/postcss-value-parser/-/postcss-value-parser-4.2.0.tgz#723c09920836ba6d3e5af019f92bc0971c02e514"
   integrity sha512-1NNCs6uurfkVbeXG4S8JFT9t19m45ICnif8zWLd5oPSZ50QnwMfK+H3jv408d4jw/7Bttv5axS5IiHoLaVNHeQ==
 
-postcss@^8.4.23, postcss@^8.4.27, postcss@^8.4.28:
+postcss@^8.4.21, postcss@^8.4.23, postcss@^8.4.27, postcss@^8.4.28:
   version "8.4.31"
   resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.4.31.tgz#92b451050a9f914da6755af352bdc0192508656d"
   integrity sha512-PS08Iboia9mts/2ygV3eLpY5ghnUcfLV/EXTOW1E2qYxJKGGBUtNjN76FYHnMs36RmARn41bC0AZmn+rR0OVpQ==
@@ -3527,6 +3595,15 @@ rehype@^12.0.1:
     rehype-parse "^8.0.0"
     rehype-stringify "^9.0.0"
     unified "^10.0.0"
+
+remark-expressive-code@^0.28.2:
+  version "0.28.2"
+  resolved "https://registry.yarnpkg.com/remark-expressive-code/-/remark-expressive-code-0.28.2.tgz#0a1c366d439d66eb5b866ecee7ba1a8b6aebe06e"
+  integrity sha512-nbQEcPCkEmt30tbbKHUAp+ufW2XQG72r9F/sKk9bnBXn/xK2PRQPxAtr9oCTBANAU2uTcROwKbMk+5P8Eobeow==
+  dependencies:
+    expressive-code "^0.28.2"
+    hast-util-to-html "^8.0.4"
+    unist-util-visit "^4.1.2"
 
 remark-gfm@^3.0.1:
   version "3.0.1"
@@ -3731,6 +3808,16 @@ shebang-regex@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/shebang-regex/-/shebang-regex-3.0.0.tgz#ae16f1644d873ecad843b0307b143362d4c42172"
   integrity sha512-7++dFhtcx3353uBaq8DDR4NuxBetBzC7ZQOhmTQInHEd6bSrXdiEyzCvG07Z44UYdLShWUyXt5M/yhz8ekcb1A==
+
+shiki@^0.14.1:
+  version "0.14.5"
+  resolved "https://registry.yarnpkg.com/shiki/-/shiki-0.14.5.tgz#375dd214e57eccb04f0daf35a32aa615861deb93"
+  integrity sha512-1gCAYOcmCFONmErGTrS1fjzJLA7MGZmKzrBNX7apqSwhyITJg2O102uFzXUeBxNnEkDA9vHIKLyeKq0V083vIw==
+  dependencies:
+    ansi-sequence-parser "^1.1.0"
+    jsonc-parser "^3.2.0"
+    vscode-oniguruma "^1.7.0"
+    vscode-textmate "^8.0.0"
 
 shikiji@^0.6.8:
   version "0.6.13"
@@ -4182,7 +4269,7 @@ unist-util-visit-children@^2.0.0:
   dependencies:
     "@types/unist" "^2.0.0"
 
-unist-util-visit-parents@^5.0.0, unist-util-visit-parents@^5.1.1:
+unist-util-visit-parents@^5.0.0, unist-util-visit-parents@^5.1.1, unist-util-visit-parents@^5.1.3:
   version "5.1.3"
   resolved "https://registry.yarnpkg.com/unist-util-visit-parents/-/unist-util-visit-parents-5.1.3.tgz#b4520811b0ca34285633785045df7a8d6776cfeb"
   integrity sha512-x6+y8g7wWMyQhL1iZfhIPhDAs7Xwbn9nRosDXl7qoPTSCy0yNxnKc+hWokFifWQIDGi154rdUqKvbCa4+1kLhg==
@@ -4406,6 +4493,16 @@ vscode-nls@^5.2.0:
   version "5.2.0"
   resolved "https://registry.yarnpkg.com/vscode-nls/-/vscode-nls-5.2.0.tgz#3cb6893dd9bd695244d8a024bdf746eea665cc3f"
   integrity sha512-RAaHx7B14ZU04EU31pT+rKz2/zSl7xMsfIZuo8pd+KZO6PXtQmpevpq3vxvWNcrGbdmhM/rr5Uw5Mz+NBfhVng==
+
+vscode-oniguruma@^1.7.0:
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/vscode-oniguruma/-/vscode-oniguruma-1.7.0.tgz#439bfad8fe71abd7798338d1cd3dc53a8beea94b"
+  integrity sha512-L9WMGRfrjOhgHSdOYgCt/yRMsXzLDJSL7BPrOZt73gU0iWO4mpqzqQzOz5srxqTvMBaR0XZTSrVWo4j55Rc6cA==
+
+vscode-textmate@^8.0.0:
+  version "8.0.0"
+  resolved "https://registry.yarnpkg.com/vscode-textmate/-/vscode-textmate-8.0.0.tgz#2c7a3b1163ef0441097e0b5d6389cd5504b59e5d"
+  integrity sha512-AFbieoL7a5LMqcnOF04ji+rpXadgOXnZsxQr//r83kLPr7biP7am3g9zbaZIaBGwBRWeSvoMD4mgPdX3e4NWBg==
 
 vscode-uri@^2.1.2:
   version "2.1.2"

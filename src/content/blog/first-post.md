@@ -1,16 +1,89 @@
 ---
-title: 'First post'
-description: 'Lorem ipsum dolor sit amet'
-pubDate: 'Jul 08 2022'
-heroImage: '/blog-placeholder-3.jpg'
+title: "Hello World"
+description: "Hello World"
+pubDate: "Jul 08 2022"
+heroImage: "/blog-placeholder-3.jpg"
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae ultricies leo integer malesuada nunc vel risus commodo viverra. Adipiscing enim eu turpis egestas pretium. Euismod elementum nisi quis eleifend quam adipiscing. In hac habitasse platea dictumst vestibulum. Sagittis purus sit amet volutpat. Netus et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Varius sit amet mattis vulputate enim. Habitasse platea dictumst quisque sagittis. Integer quis auctor elit sed vulputate mi. Dictumst quisque sagittis purus sit amet.
+I'm excited to announce my first npm package, `astro-layouts`. This package injects a layout property into MD and MDX files' frontmatter, making it easier to use layouts in Astro without the need to define them for each page in the frontmatter.
 
-Morbi tristique senectus et netus. Id semper risus in hendrerit gravida rutrum quisque non tellus. Habitasse platea dictumst quisque sagittis purus sit amet. Tellus molestie nunc non blandit massa. Cursus vitae congue mauris rhoncus. Accumsan tortor posuere ac ut. Fringilla urna porttitor rhoncus dolor. Elit ullamcorper dignissim cras tincidunt lobortis. In cursus turpis massa tincidunt dui ut ornare lectus. Integer feugiat scelerisque varius morbi enim nunc. Bibendum neque egestas congue quisque egestas diam. Cras ornare arcu dui vivamus arcu felis bibendum. Dignissim suspendisse in est ante in nibh mauris. Sed tempus urna et pharetra pharetra massa massa ultricies mi.
+## Idea and Motivation
 
-Mollis nunc sed id semper risus in. Convallis a cras semper auctor neque. Diam sit amet nisl suscipit. Lacus viverra vitae congue eu consequat ac felis donec. Egestas integer eget aliquet nibh praesent tristique magna sit amet. Eget magna fermentum iaculis eu non diam. In vitae turpis massa sed elementum. Tristique et egestas quis ipsum suspendisse ultrices. Eget lorem dolor sed viverra ipsum. Vel turpis nunc eget lorem dolor sed viverra. Posuere ac ut consequat semper viverra nam. Laoreet suspendisse interdum consectetur libero id faucibus. Diam phasellus vestibulum lorem sed risus ultricies tristique. Rhoncus dolor purus non enim praesent elementum facilisis. Ultrices tincidunt arcu non sodales neque. Tempus egestas sed sed risus pretium quam vulputate. Viverra suspendisse potenti nullam ac tortor vitae purus faucibus ornare. Fringilla urna porttitor rhoncus dolor purus non. Amet dictum sit amet justo donec enim.
+I came up with the idea for this package while helping people in the Astro Discord server. I noticed that many users were struggling to define layouts, especially when dealing with numerous pages. To simplify the process, I decided to create a package that would allow them to define layouts from the Astro config file using glob patterns. With this approach, users could define a layout once and use it across multiple pages.
 
-Mattis ullamcorper velit sed ullamcorper morbi tincidunt. Tortor posuere ac ut consequat semper viverra. Tellus mauris a diam maecenas sed enim ut sem viverra. Venenatis urna cursus eget nunc scelerisque viverra mauris in. Arcu ac tortor dignissim convallis aenean et tortor at. Curabitur gravida arcu ac tortor dignissim convallis aenean et tortor. Egestas tellus rutrum tellus pellentesque eu. Fusce ut placerat orci nulla pellentesque dignissim enim sit amet. Ut enim blandit volutpat maecenas volutpat blandit aliquam etiam. Id donec ultrices tincidunt arcu. Id cursus metus aliquam eleifend mi.
+## How It Works
 
-Tempus quam pellentesque nec nam aliquam sem. Risus at ultrices mi tempus imperdiet. Id porta nibh venenatis cras sed felis eget velit. Ipsum a arcu cursus vitae. Facilisis magna etiam tempor orci eu lobortis elementum. Tincidunt dui ut ornare lectus sit. Quisque non tellus orci ac. Blandit libero volutpat sed cras. Nec tincidunt praesent semper feugiat nibh sed pulvinar proin gravida. Egestas integer eget aliquet nibh praesent tristique magna.
+The package utilizes glob patterns to match pages with their respective layouts. It then injects the layout property into the frontmatter of each page. The package leverages `picomatch` in the background to perform the glob pattern matching.
+
+## Installation
+
+To install the package, run the following command:
+
+```bash
+npm install astro-layouts
+```
+
+## Usage
+
+To use the package, add it to the Astro config file in the remark plugin section. Here's an example of an `astro.config.mjs` file:
+
+```js title="astro.config.mjs"
+import { defineConfig } from "astro/config";
+import astroLayouts from "astro-layouts";
+
+const layoutOptions = {
+  "pages/**/*": "/src/layouts/Layout.astro",
+};
+
+export default defineConfig({
+  markdown: {
+    remarkPlugins: [[astroLayouts, layoutOptions]],
+  },
+});
+```
+
+In the `layoutOptions` object, you define the glob pattern and the layout to be used. The `key` represents the glob pattern for selecting files, while the `value` represents the absolute path to the layout component.
+
+You can be as specific as needed with the glob patterns. Here are some examples:
+
+- `pages/blog/**/*.md` matches all markdown files in the blog folder.
+- `pages/blog/**/*.mdx` matches all MDX files in the blog folder.
+- `pages/projects/*` matches all top-level files in the blog folder.
+- `pages/**/* matches` all files in the pages folder.
+
+You can target any file within the `src` folder. For instance, if your content resides in the src/markdown folder, you can use the following configuration:
+
+```js
+const layoutOptions = {
+  "content/**/*": "/src/layouts/Layout.astro",
+};
+```
+
+If you have aliases defined in your `tsconfig.json` file, you can use them to create shorter layout paths. Here's an example of a `tsconfig.json` file:
+
+```json title="tsconfig.json"
+{
+  "extends": "astro/tsconfigs/base",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@layouts/*": ["src/layouts/*"],
+    },
+  }
+}
+
+```
+
+Then you can use aliases in the `layoutOptions`
+
+```js
+const layoutOptions = {
+  "pages/**/*": "@layouts/Layout.astro",
+};
+```
+
+## Final thoughts
+
+I hope you find this package useful. If you have any questions or suggestions, feel free to raise an issue on [GitHub](https://github.com/kevinzunigacuellar/astro-layouts). I would appreciate any feedback. If you like the package, please consider giving it a star.
+
+Writing this package was a lot of fun, and it provided me with valuable insights into the workings of npm packages and their publication process. I'm excited to create more packages in the future. Thank you for reading!
