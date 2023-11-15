@@ -10,7 +10,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 ---
 
 <AppLayout title={title} description={description}>
-  <main class="max-w-3xl mx-auto my-10" data-pagefind-body>
+  <main class="max-w-3xl mx-auto my-10 px-6 lg:px-0" data-pagefind-body>
     <header class="flex flex-col mb-8">
       <FormattedDate date={pubDate} data-pagefind-ignore />
       {
