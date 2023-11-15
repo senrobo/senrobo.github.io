@@ -1,12 +1,11 @@
 ---
-import Link from '../components/Link.astro';
+import Link from "../components/Link.astro";
 import navigation from "../data/navigation.json";
 import { author, defaultMeta } from "../data/socials.ts";
 import "@fontsource-variable/inter";
 
-
 interface Props {
-	title: string;
+  title: string;
   description?: string;
   ogImage?: {
     src: string;
@@ -15,40 +14,44 @@ interface Props {
   pubDate?: Date;
 }
 
-const { 
+const {
   title = defaultMeta.title,
   description = defaultMeta.description,
   ogImage = defaultMeta.ogImage,
-  pubDate, 
+  pubDate,
 } = Astro.props;
 
-// const ogImageURL = new URL(ogImage.src, Astro.site).href;
-// const canonicalURL = new URL(Astro.url).href;
+const ogImageURL = new URL(ogImage.src, Astro.site).href;
+const canonicalURL = new URL(Astro.url).href;
 ---
 
 <!doctype html>
-<html lang="en">  
+<html lang="en">
   <head>
+    <!-- Global Metadata -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
+    <!-- Primary Meta Tags -->
     <title>{title}</title>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <!-- <link rel="canonical" href={canonicalURL} /> -->
+    <link rel="canonical" href={canonicalURL} />
     <meta name="title" content={title} />
     <meta name="description" content={description} />
+    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <!-- <meta property="og:url" content={canonicalURL} /> -->
+    <meta property="og:url" content={canonicalURL} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <!-- <meta property="og:image" content={ogImageURL} /> -->
+    <meta property="og:image" content={ogImageURL} />
     <meta property="og:site_name" content={author} />
     <meta property="og:image:alt" content={ogImage.alt} />
     <meta property="og:locale" content="en_US" />
+    <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
-    <!-- <meta property="twitter:url" content={canonicalURL} /> -->
+    <meta property="twitter:url" content={canonicalURL} />
     <meta property="twitter:title" content={title} />
     <meta property="twitter:description" content={description} />
-    <!-- <meta property="twitter:image" content={ogImageURL} /> -->
+    <meta property="twitter:image" content={ogImageURL} />
     <meta name="generator" content={Astro.generator} />
     <meta name="robots" content="follow, index" />
     <meta name="author" content={author} />
@@ -61,30 +64,28 @@ const {
       )
     }
   </head>
-	<body class="bg-zinc-900 antialiased text-white  selection:bg-teal-600 2xl:text-lg">
-    <a
-      href="#main-content"
-      class="absolute opacity-0 focus:opacity-100 border-transparent border-y border-r focus:border-blue-400 text-xs lg:text-sm px-4 py-1.5 lg:py-2 top-1 lg:top-[41px] transition-transform duration-300 rounded-r-full bg-blue-200 font-medium text-blue-800 focus:outline-none -translate-x-full focus:translate-x-0"
-      >Skip to main content</a>
-		<nav
+  <body
+    class="bg-zinc-900 antialiased text-white selection:bg-teal-600 2xl:text-lg"
+  >
+    <nav
       class="fixed z-50 w-5/6 mx-auto overflow-x-auto rounded-full bottom-6 right-6 sm:overflow-x-visible max-w-min ring-1 dark:ring-zinc-700/80 ring-zinc-200 bg-white/60 dark:bg-zinc-800/60 sm:w-auto"
     >
-			<ul class="flex items-center justify-start">
-				{
+      <ul class="flex items-center justify-start">
+        {
           navigation.map((item) => (
             <li>
               <Link {...item} />
             </li>
           ))
         }
-		</ul>
-		</nav>
-		<main id="main-content">
+      </ul>
+    </nav>
+    <main id="main-content">
       <slot />
     </main>
-	</body>
+  </body>
 </html>
-<style is:global>
+<style>
   nav {
     -ms-overflow-style: none; /* Internet Explorer 10+ */
     scrollbar-width: none; /* Firefox */

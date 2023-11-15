@@ -1,56 +1,76 @@
 ---
-import Layout from '../layouts/AppLayout.astro';
-import peopleData from '../data/people.json';
+import Layout from "../layouts/AppLayout.astro";
+import peopleData from "../data/people.json";
+import { Image } from "astro:assets";
+import robot from "../assets/robot-outline.jpeg";
 ---
 
 <Layout title="Home">
-		<section class="w-full h-screen mb-8 bg-center bg-no-repeat bg-cover bg-hero">
-			<div class="flex items-center h-full px-12 text-left bg-gradient-to-t from-zinc-900 to-zinc-900/60">
-				<div>
-					<h1 class="text-4xl font-semibold">Sentinels Robotics</h1>
-					<h2 class="my-2 text-sm font-medium md:text-lg">
-						<span class="inline-block underline">
-							<a href="https://goo.gl/maps/djV63fi472JbwxD58" rel="noopener noreferrer" target="_blank">Hwa Chong Insitution,
-							Singapore</a>
-						</span>
-						<span class="inline-block">&nbsp;— est. 2021</span>
-					</h2>
-				</div>
-			</div>
-		</section>
-		<section class="flex justify-center h-[75vh] w-5/6 m-auto my-24 place-items-center">
-			<div>
-				<h1 class="mb-8 text-4xl font-bold text-center underline lg:text-5xl">
-					The Team
-				</h1>
-				<div class="grid grid-cols-2 gap-8 m-auto lg:grid-cols-4 [&>*:nth-child(even)]:lg:mt-8
-">
-					{
-						peopleData.map((item) => (
-							<div class="flex flex-col items-center">
-								<img src={item.image} alt={item.name} class="object-cover w-32 h-32 mb-4 rounded-md lg:h-64 lg:w-64" />
-								<h2 class="mb-1 text-base font-bold lg:text-2xl">{item.name}</h2>
-								<h3 class="text-sm font-medium lg:text-lg ">{item.description}</h3>
-							</div>
-						))
-					}
-				</div>
-			</div>
-		</section>
-		<section class="my-24">
-			<div class="flex flex-row w-full">
-				<div class="w-32 lg:w-48">
-					<h1 class="m-auto text-3xl font-bold lg:text-6xl" style={{ writingMode: 'vertical-rl' }}>
-						Our Robot
-					</h1>
-				</div>
-				<div class="w-[80vw] h-[40vh] lg:h-[70vh] m-auto">
-					<iframe
-					src="https://gmail1431777.autodesk360.com/shares/public/SHd38bfQT1fb47330c9945204f6acdc08e16?mode=embed"
-					allowfullscreen="true"
-					style="position: relative; height: 100%; width: 100%;"
-				></iframe>
-				</div>
-			</div>
-		</section>
+  <section class="w-full h-screen mb-8 bg-center bg-no-repeat bg-cover bg-hero">
+    <div
+      class="flex items-center h-full px-12 text-left bg-gradient-to-t from-zinc-900 to-zinc-900/60"
+    >
+      <div>
+        <h1 class="text-4xl font-semibold">Sentinels Robotics</h1>
+        <h2 class="my-2 text-sm font-medium md:text-lg">
+          <span class="inline-block underline">
+            <a
+              href="https://goo.gl/maps/djV63fi472JbwxD58"
+              rel="noopener noreferrer"
+              target="_blank">Hwa Chong Insitution, Singapore</a
+            >
+          </span>
+          <span class="inline-block">&nbsp;— est. 2021</span>
+        </h2>
+      </div>
+    </div>
+  </section>
+  <section
+    class="flex justify-center h-[75vh] w-5/6 m-auto my-24 place-items-center"
+  >
+    <div>
+      <h1 class="mb-8 text-4xl font-bold text-center underline lg:text-5xl">
+        The Team
+      </h1>
+      <div
+        class="grid grid-cols-2 gap-8 m-auto lg:grid-cols-4 [&>*:nth-child(even)]:lg:mt-8"
+      >
+        {
+          peopleData.map((item) => (
+            <div class="flex flex-col items-center">
+              <img
+                src={item.image}
+                alt={item.name}
+                class="object-cover w-32 h-32 mb-4 rounded-md lg:h-64 lg:w-64"
+              />
+              <h2 class="mb-1 text-base font-bold lg:text-2xl">{item.name}</h2>
+              <h3 class="text-sm font-medium lg:text-lg ">
+                {item.description}
+              </h3>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+  <section class="my-24">
+    <div class="flex flex-row w-full">
+      <div class="w-32 lg:w-48">
+        <h1
+          class="m-auto text-3xl font-bold lg:text-6xl"
+          style={{ writingMode: "vertical-rl" }}
+        >
+          Our Robot
+        </h1>
+      </div>
+      <div class="w-[80vw] m-auto flex justify-center max-w-2xl pr-4">
+        <Image
+          src={robot}
+          class="inline-flex overflow-hidden rounded-md h-full aspect-auto"
+          alt="Image of the author"
+          loading="eager"
+        />
+      </div>
+    </div>
+  </section>
 </Layout>

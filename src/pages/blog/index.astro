@@ -1,11 +1,9 @@
 ---
 import AppLayout from "../../layouts/AppLayout.astro";
-import BlogCard from "../../components/BlogCard.astro";
-import Header from "../../components/Header.astro";
 import { getCollection } from "astro:content";
-
+import BlogCard from "../../components/BlogCard.astro";
 const posts = (await getCollection("blog")).sort(
-  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+  (a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf(),
 );
 
 const title = "Blog | Sentinels Robotics";
@@ -15,7 +13,11 @@ const description =
 
 <AppLayout title={title} description={description}>
   <section class="px-6 lg:px-0 mx-auto max-w-3xl text-left mt-12">
-    <Header title="Blog" />
+    <h1
+      class="mb-6 dark:text-zinc-200 text-zinc-900 text-3xl font-bold tracking-tight sm:text-4xl"
+    >
+      {title}
+    </h1>
     <p
       class="max-w-prose mb-10 font-normal dark:text-zinc-400 text-zinc-600 leading-relaxed"
     >

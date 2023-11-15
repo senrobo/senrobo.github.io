@@ -1,18 +1,15 @@
-import { defineCollection, z } from "astro:content";
-import { author } from "../data/socials";
+import { defineCollection, z } from 'astro:content';
 
-const blogCollection = defineCollection({
-  schema: ({ image }) =>
-    z.object({
-      title: z.string().max(60).min(10),
-      hero: image(),
-      heroAlt: z.string(),
-      description: z.string().max(160).min(10),
-      pubDate: z.date(),
-      author: z.string(),
-    }),
+const blog = defineCollection({
+	// Type-check frontmatter using a schema
+	schema: z.object({
+		title: z.string(),
+		description: z.string(),
+		// Transform string to Date object
+		pubDate: z.coerce.date(),
+		updatedDate: z.coerce.date().optional(),
+		heroImage: z.string().optional(),
+	}),
 });
 
-export const collections = {
-  blog: blogCollection,
-};
+export const collections = { blog };
