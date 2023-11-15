@@ -7,6 +7,11 @@ export default {
     extend: {
       fontFamily: {
         sans: ["InterVariable", "Inter", ...defaultTheme.fontFamily.sans],
+        mono: [
+          "VictorMonoVariable",
+          "Victor Mono",
+          ...defaultTheme.fontFamily.mono,
+        ],
       },
       backgroundImage: {
         hero: "url('../images/banner.webp')",

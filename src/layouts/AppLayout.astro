@@ -63,6 +63,18 @@ const canonicalURL = new URL(Astro.url).href;
         />
       )
     }
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet" />
+    <style>
+      :root {
+        --pagefind-ui-primary: #d8d8d8 !important;
+        --pagefind-ui-secondary: #d8d8d8 !important;
+        --pagefind-ui-background: #1d1f21 !important;
+        --pagefind-ui-border: #2b2b2b !important;
+        --pagefind-ui-tag: #d8d8d8 !important;
+        --pagefind-ui-text: #d8d8d8 !important;
+      }
+    </style>
+    <script src="/pagefind/pagefind-ui.js" is:inline></script>
   </head>
   <body
     class="bg-zinc-900 antialiased text-white selection:bg-teal-600 2xl:text-lg"

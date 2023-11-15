@@ -21,6 +21,16 @@ const description =
     <p class="max-w-prose mb-10 font-normal text-zinc-400 leading-relaxed">
       {description}
     </p>
+    <div id="search" class="text-white mb-10"></div>
+    <script>
+      window.addEventListener("DOMContentLoaded", (event) => {
+        //@ts-ignore
+        new PagefindUI({
+          element: "#search",
+          debounceTimeoutMs: 500,
+        });
+      });
+    </script>
     <ul class="flex flex-col gap-8 border-l border-zinc-800">
       {
         posts.map((post) => (

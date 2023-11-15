@@ -640,6 +640,11 @@
   resolved "https://registry.yarnpkg.com/@fontsource-variable/inter/-/inter-5.0.15.tgz#f478ca30aa5ac275a45fe8c600654dc8eb0db279"
   integrity sha512-CdQPQQgOVxg6ifmbrqYZeUqtQf7p2wPn6EvJ4M+vdNnsmYZgYwPPPQDNlIOU7LCUlSGaN26v6H0uA030WKn61g==
 
+"@fontsource-variable/victor-mono@^5.0.3":
+  version "5.0.3"
+  resolved "https://registry.yarnpkg.com/@fontsource-variable/victor-mono/-/victor-mono-5.0.3.tgz#11dbb489755478ffc0b67ca5002357202a9f9dac"
+  integrity sha512-vZWuwe0BAND2vsdTPwC+DlqifUyuWtHgX9l9jweZL+5ikfgO2SszDGBXVxbgwMtbHv4wsXwwI62cqfVOqcJj4w==
+
 "@jridgewell/gen-mapping@^0.3.0", "@jridgewell/gen-mapping@^0.3.2":
   version "0.3.3"
   resolved "https://registry.yarnpkg.com/@jridgewell/gen-mapping/-/gen-mapping-0.3.3.tgz#7e02e6eb5df901aaedb08514203b096614024098"
