@@ -13,6 +13,6 @@ the pcb is easily damaged when hit from the side, which has a risk of exposing t
 
 ## Standoff Stabilisation
 
-![tof outline](file:///Users/shuanluck/Downloads/wavytofoutline.png)
+![tof outline](file/Users/shuanluck/Downloads/wavytofoutline.png)
 
 the 90mm (but currently 110mm) standoffs are wobbly when shaken, with the bot held still, so i added extensions/arms on both side of the tof holder with cross bracing, which wraps around the side standoffs and prevents the standoffs from slanting to each side too much. 
