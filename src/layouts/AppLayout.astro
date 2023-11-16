@@ -23,6 +23,8 @@ const {
 
 const ogImageURL = new URL(ogImage.src, Astro.site).href;
 const canonicalURL = new URL(Astro.url).href;
+
+import { ViewTransitions } from "astro:transitions";
 ---
 
 <!doctype html>
@@ -75,6 +77,7 @@ const canonicalURL = new URL(Astro.url).href;
       }
     </style>
     <script src="/pagefind/pagefind-ui.js" is:inline></script>
+    <ViewTransitions />
   </head>
   <body
     class="bg-zinc-900 antialiased text-white selection:bg-teal-600 2xl:text-lg"
@@ -95,14 +98,13 @@ const canonicalURL = new URL(Astro.url).href;
     <main id="main-content">
       <slot />
     </main>
-  </body>
+  </body><style>
+    nav {
+      -ms-overflow-style: none; /* Internet Explorer 10+ */
+      scrollbar-width: none; /* Firefox */
+    }
+    nav::-webkit-scrollbar {
+      display: none; /* Safari and Chrome */
+    }
+  </style>
 </html>
-<style>
-  nav {
-    -ms-overflow-style: none; /* Internet Explorer 10+ */
-    scrollbar-width: none; /* Firefox */
-  }
-  nav::-webkit-scrollbar {
-    display: none; /* Safari and Chrome */
-  }
-</style>
