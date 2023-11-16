@@ -23,7 +23,6 @@ const {
 
 const ogImageURL = new URL(ogImage.src, Astro.site).href;
 const canonicalURL = new URL(Astro.url).href;
-
 ---
 
 <!doctype html>
@@ -79,7 +78,7 @@ const canonicalURL = new URL(Astro.url).href;
     <script src="/pagefind/pagefind-ui.js" is:inline></script>
   </head>
   <body
-    class="bg-zinc-900 antialiased text-white selection:bg-teal-600 2xl:text-lg"
+    class="antialiased text-white bg-zinc-900 selection:bg-teal-600 2xl:text-lg"
   >
     <nav
       class="fixed z-50 w-5/6 mx-auto overflow-x-auto rounded-full bottom-6 right-6 sm:overflow-x-visible max-w-min ring-1 ring-zinc-700/80 bg-zinc-800/60 sm:w-auto"
