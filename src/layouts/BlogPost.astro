@@ -1,6 +1,5 @@
 ---
 import type { CollectionEntry } from "astro:content";
-import Footer from "../components/Footer.astro";
 import { Image } from "astro:assets";
 import FormattedDate from "../components/FormattedDate.astro";
 import AppLayout from "./AppLayout.astro";
@@ -49,7 +48,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
       )
     }
     <article
-      class="mt-10 prose dark:prose-invert lg:prose-lg dark:prose-code:text-zinc-300 dark:prose-a:text-blue-400 prose-a:text-blue-600 max-w-none hover:prose-a:underline focus:prose-a:underline prose-a:no-underline dark:prose-headings:text-teal-500 prose-img:rounded-lg"
+      class="mt-10 prose-invert lg:prose-lg prose-code:text-zinc-300 prose-a:text-blue-400 max-w-none hover:prose-a:underline focus:prose-a:underline prose-a:no-underline prose-headings:text-teal-500 prose-img:rounded-lg"
     >
       <slot />
     </article>
