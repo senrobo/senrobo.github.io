@@ -5,8 +5,6 @@ pubDate: "Nov 16 2023"
 heroImage: "/mirrorbrace.webp"
 ---
 
-heres a brief outline of what has been changed mechanically today.
-
 ## PCB Offset and Cover Extension
 
 The PCB is easily damaged when hit from the side, which poses a risk of exposing the copper after continuous impacts. To address this issue, the DXF file for all three layers is offset inwards by 1mm, and the cover is extended downwards and/or upwards to fill the gap. This ensures that there is a layer of hard plastic protecting the edges of the PCB.

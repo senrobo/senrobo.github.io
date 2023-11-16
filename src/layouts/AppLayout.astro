@@ -24,7 +24,6 @@ const {
 const ogImageURL = new URL(ogImage.src, Astro.site).href;
 const canonicalURL = new URL(Astro.url).href;
 
-import { ViewTransitions } from "astro:transitions";
 ---
 
 <!doctype html>
@@ -65,7 +64,6 @@ import { ViewTransitions } from "astro:transitions";
         />
       )
     }
-    <ViewTransitions />
     <link href="/pagefind/pagefind-ui.css" rel="stylesheet" />
     <style>
       :root {

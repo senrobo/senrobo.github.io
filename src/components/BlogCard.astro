@@ -21,14 +21,12 @@ const fullDate = pubDate.toLocaleDateString("en", {
   <time
     datetime={pubDate.toISOString()}
     class="block text-sm tracking-relaxed text-zinc-400"
-    transition:name="blogTime"
   >
     {fullDate}
   </time>
   <a
     class="text-lg before:absolute before:inset-0 font-semibold text-zinc-100"
     href={url}
-    transition:name="blogTitle"
   >
     {title}
   </a>
