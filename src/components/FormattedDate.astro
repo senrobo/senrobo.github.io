@@ -6,11 +6,15 @@ interface Props {
 const { date } = Astro.props;
 ---
 
-<time class="text-center text-zinc-500" datetime={date.toISOString()}>
+<time
+  class="text-center text-zinc-500"
+  datetime={date.toISOString()}
+  transition:name="blogTime"
+>
   {
     date.toLocaleDateString("en-us", {
       year: "numeric",
-      month: "short",
+      month: "long",
       day: "numeric",
     })
   }
