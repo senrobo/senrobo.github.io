@@ -98,13 +98,14 @@ import { ViewTransitions } from "astro:transitions";
     <main id="main-content">
       <slot />
     </main>
-  </body><style>
-    nav {
-      -ms-overflow-style: none; /* Internet Explorer 10+ */
-      scrollbar-width: none; /* Firefox */
-    }
-    nav::-webkit-scrollbar {
-      display: none; /* Safari and Chrome */
-    }
-  </style>
+    <style>
+      nav {
+        -ms-overflow-style: none; /* Internet Explorer 10+ */
+        scrollbar-width: none; /* Firefox */
+      }
+      nav::-webkit-scrollbar {
+        display: none; /* Safari and Chrome */
+      }
+    </style>
+  </body>
 </html>
