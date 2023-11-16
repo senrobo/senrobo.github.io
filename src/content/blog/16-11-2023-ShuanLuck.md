@@ -2,7 +2,7 @@
 title: "Mech Changes"
 description: "PCB Support & Mirror Stabalisation"
 pubDate: "Nov 16 2023"
-heroImage: "/mirrobrace.webp"
+heroImage: "/mirrorbrace.webp"
 ---
 
 heres a brief outline of what has been changed mechanically today.
