@@ -4,8 +4,18 @@ import { Image } from "astro:assets";
 import FormattedDate from "../components/FormattedDate.astro";
 import AppLayout from "./AppLayout.astro";
 type Props = CollectionEntry<"blog">["data"];
+import peopleData from "../data/people.json";
 
-const { title, description, pubDate, heroImage } = Astro.props;
+const { title, description, pubDate, heroImage, author } = Astro.props;
+
+let authorImage = null;
+
+for (let person of peopleData) {
+  if (Object.keys(person)[0] === author) {
+    authorImage = Object.values(person)[0][0].image;
+    break;
+  }
+}
 ---
 
 <AppLayout title={title} description={description}>
@@ -13,23 +23,38 @@ const { title, description, pubDate, heroImage } = Astro.props;
     <header class="flex flex-col mb-4">
       <FormattedDate date={pubDate} data-pagefind-ignore />
       <h1
-        class="text-2xl font-bold text-center text-transparent sm:text-4xl bg-clip-text bg-gradient-to-r from-teal-500 via-blue-500 to-purple-500"
+        class="text-2xl font-bold text-center mb-2 text-transparent sm:text-4xl bg-clip-text bg-gradient-to-r from-teal-500 via-blue-500 to-purple-500"
       >
         {title}
       </h1>
+      <div class="inline-flex gap-2 justify-center items-center mb-8">
+        <div class="aspect-square rounded-full overflow-hidden">
+          <Image
+            src={authorImage}
+            alt="Image of the author"
+            loading="eager"
+            class="aspect-square w-8"
+            width={80}
+            height={80}
+          />
+        </div>
+        <p class="dark:text-zinc-400 text-zinc-700 text-sm">
+          <span class="block font-semibold">{author}</span>
+        </p>
+      </div>
+      {
+        heroImage && (
+          <Image
+            width={1020}
+            height={510}
+            src={heroImage}
+            alt=""
+            class="rounded-lg"
+            data-pagefind-ignore
+          />
+        )
+      }
     </header>
-    {
-      heroImage && (
-        <Image
-          width={1020}
-          height={510}
-          src={heroImage}
-          alt=""
-          class="rounded-lg"
-          data-pagefind-ignore
-        />
-      )
-    }
     <article
       class="mt-10 prose dark:prose-invert lg:prose-lg dark:prose-code:text-zinc-300 dark:prose-a:text-blue-400 prose-a:text-blue-600 max-w-none hover:prose-a:underline focus:prose-a:underline prose-a:no-underline dark:prose-headings:text-teal-500 prose-img:rounded-lg"
     >

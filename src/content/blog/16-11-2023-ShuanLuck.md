@@ -3,6 +3,7 @@ title: "Mech Changes"
 description: "PCB Support & Mirror Stabalisation"
 pubDate: "Nov 16 2023"
 heroImage: "/mirrorbrace.webp"
+author: "Sim Shuan Luck"
 ---
 
 ## PCB Offset and Cover Extension

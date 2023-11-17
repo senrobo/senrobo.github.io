@@ -3,6 +3,7 @@ title: "Mirror Polishing"
 description: "The mirror is they only way you can see the field, so its important to produce a high resolution one"
 pubDate: "Nov 17 2023"
 heroImage: "/unpolished-mirror.webp"
+author: "Sim Shuan Luck"
 ---
 
 ## Manufacturing
