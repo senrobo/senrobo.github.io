@@ -2,7 +2,7 @@
 title: "Mirror Polishing"
 description: "The mirror is they only way you can see the field, so its important to produce a high resolution one"
 pubDate: "Nov 17 2023"
-heroImage: "/blog-placeholder-4.jpg"
+heroImage: "/unpolished-mirror.webp"
 ---
 
 ## Manufacturing
