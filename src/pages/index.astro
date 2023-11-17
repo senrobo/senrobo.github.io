@@ -2,7 +2,7 @@
 import Layout from "../layouts/AppLayout.astro";
 import peopleData from "../data/people.json";
 import { Image } from "astro:assets";
-import robot from "../assets/robot-outline.jpeg";
+import robot from "../assets/robot-outline.webp";
 ---
 
 <Layout title="Home">
@@ -65,13 +65,8 @@ import robot from "../assets/robot-outline.jpeg";
           Our Robot
         </h1>
       </div>
-      <div class="w-[80vw] m-auto flex justify-center max-w-2xl pr-4">
-        <Image
-          src={robot}
-          class="inline-flex overflow-hidden rounded-md h-full aspect-auto"
-          alt="Image of the author"
-          loading="eager"
-        />
+      <div class="w-[80vw] m-auto max-w-2xl bg-zinc-100 rounded-xl">
+        <Image src={robot} alt="Image of robot" loading="eager" />
       </div>
     </div>
   </section>
