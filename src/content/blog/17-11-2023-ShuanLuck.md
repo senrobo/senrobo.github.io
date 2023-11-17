@@ -9,6 +9,8 @@ heroImage: "/blog-placeholder-4.jpg"
 
 We sent the mirror file to JLCPCB to CNC, and selected the polishing option. We added a 4mm shaft to the top of the mirror to attach to the drill during polishing afterwards, and also so that the mirror can be mounted on the bot with a universal pololu 4mm mounting hub. We expected the mirror to have a mirror finish because they have better polishing equipment, but when we received it it wasn't up to our expectations (see image below). Thus, we had to further polish it. 
 
+![unpolished mirror](public/unpolished-mirror.jpeg)
+
 ## Wet Sanding
 
 The mirror we received still had visible lines, so we tried to wet sand it with 3000 grit sandpaper, but it only made it worse. Thus, we decided to just to ahead with polishing directly. To sand the mirror, we attached the mirror to the drill. One person would hold the drill while another person would apply pressure on the mirror with the sandpaper, while squirting water on the mirror. We took an empyty plastic bottle, drilled holes in the cap, and filled it with water. 
