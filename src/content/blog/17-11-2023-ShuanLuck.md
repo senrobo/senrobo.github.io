@@ -25,7 +25,9 @@ The mirror we received still had visible lines, so we tried to wet sand it with 
 At first, we performed polishing in a similar way to how did sanding, except we squeezed mirror polish on a piece of cloth instead. However, we found that it displayed slow progess in the mirror resolution. Instead, someone will hold the drill in their right hand and hold the cloth in their left hand, while someone else will help to squeeze mirror polish on the cloth and squirt water, to cool down the mirror. It can get quite warm after extended periods of polishing. It is important to apply alot of pressure on the mirror by the cloth, and to ensure that all parts of the mirror (centre, equal, sides) are equally polished. We had to repeat this process several times for about 10 minutes until we achieved resonable resolution.
 
 ![Alt text](/polishing-in-progress.webp)
-*Polishing in progress*  
+*Polishing in progress*
+
+&nbsp  
 
 ![Alt text](/polished-mirror.webp)
 *Polished mirror*
