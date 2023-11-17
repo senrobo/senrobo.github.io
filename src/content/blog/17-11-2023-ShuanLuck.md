@@ -9,7 +9,7 @@ heroImage: "/blog-placeholder-4.jpg"
 
 We sent the mirror file to JLCPCB to CNC, and selected the polishing option. We added a 4mm shaft to the top of the mirror to attach to the drill during polishing afterwards, and also so that the mirror can be mounted on the bot with a universal pololu 4mm mounting hub. We expected the mirror to have a mirror finish because they have better polishing equipment, but when we received it it wasn't up to our expectations (see image below). Thus, we had to further polish it. 
 
-![alt text](https://upload.wikimedia.org/wikipedia/commons/4/4c/13-06-28-robocup-eindhoven-024.jpg)
+![alt text](/Users/shuanluck/Documents/GitHub/senrobo.github.io/public/unpolished-mirror.jpeg)
 
 ## Wet Sanding
 
