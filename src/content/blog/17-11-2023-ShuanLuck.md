@@ -27,8 +27,12 @@ At first, we performed polishing in a similar way to how did sanding, except we 
 ![Alt text](/polishing-in-progress.webp)
 *Polishing in progress*
 
+<br>
+
 ![Alt text](/polished-mirror.webp)
 *Polished mirror*
+
+<br>
 
 <iframe width="768" height="432" src="https://www.youtube.com/embed/EE-xtCF3T94?si=JedWFWiKZkAeZE9O" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
