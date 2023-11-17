@@ -8,7 +8,7 @@ author: "Sim Shuan Luck"
 
 ## Manufacturing
 
-We sent the mirror file to JLCPCB to CNC, and selected the polishing option. We added a 4mm shaft to the top of the mirror to attach to the drill during polishing afterwards, and also so that the mirror can be mounted on the bot with a universal pololu 4mm mounting hub. We expected the mirror to have a mirror finish because they have better polishing equipment, but when we received it it wasn't up to our expectations. Thus, we had to further polish it.
+We sent the mirror file to [JLCPCB](https://www.jlcpcb.com) to CNC, and selected the polishing option. We added a 4mm shaft to the top of the mirror to attach to the drill during polishing afterwards, and also so that the mirror can be mounted on the bot with a universal [Polulu](https://www.pololu.com/) 4mm mounting hub. We expected the mirror to have a mirror finish because they have better polishing equipment, but when we received it it wasn't up to our expectations. Thus, we had to further polish it.
 
 ![Alt text](/unpolished-mirror.webp "Unpolished mirror")
 
