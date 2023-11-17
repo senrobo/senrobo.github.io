@@ -30,7 +30,7 @@ At first, we performed polishing in a similar way to how did sanding, except we 
 ![Alt text](/polished-mirror.webp)
 *Polished mirror*
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/EE-xtCF3T94?si=UoyAjvx_yK41zByZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="1920" height="1080" src="https://www.youtube.com/embed/EE-xtCF3T94?si=UoyAjvx_yK41zByZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ## Conclusion
 
