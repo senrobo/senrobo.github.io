@@ -1,4 +1,4 @@
-import { defaultMeta } from "@/data/socials";
+import { defaultMeta } from "../../data/socials";
 import generateOgImage, { type OgData } from "../../utils/generateOgImages";
 import { type CollectionEntry, getCollection } from "astro:content";
 import type { APIRoute, GetStaticPaths, GetStaticPathsItem } from "astro";
