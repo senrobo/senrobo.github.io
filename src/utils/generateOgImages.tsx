@@ -19,7 +19,7 @@ const Template = (props: OgData) => (
       alignItems: "center",
       justifyContent: "center",
       flexDirection: "column",
-      backgroundImage: "linear-gradient(to bottom, #dbf4ff, #fff1f1)",
+      background: "rgb(24 24 27)",
       letterSpacing: -1,
       fontWeight: 700,
       textAlign: "center",
@@ -28,20 +28,17 @@ const Template = (props: OgData) => (
     <div
       style={{
         backgroundImage:
-          "linear-gradient(90deg, rgb(0, 124, 240), rgb(0, 223, 216))",
+          "linear-gradient(90deg, rgb(20,184,166), rgb(59,130,246),rgb(168,85,247))",
         backgroundClip: "text",
         color: "transparent",
         fontSize: 50,
       }}
     >
-      {props.title}
+      Fuck
     </div>
     <div
       style={{
-        backgroundImage:
-          "linear-gradient(90deg, rgb(121, 40, 202), rgb(255, 0, 128))",
-        backgroundClip: "text",
-        color: "transparent",
+        color: "rgb(20,184,166)",
         fontSize: 24,
       }}
     >
@@ -98,7 +95,7 @@ const generateOgImage = async (
   const options: SatoriOptions = {
     width: 600,
     height: 315,
-    embedFont: true,
+    embedFont: false,
     fonts: [
       {
         name: "IBM Plex Mono",
