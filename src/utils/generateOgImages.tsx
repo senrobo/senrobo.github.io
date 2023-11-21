@@ -3,9 +3,6 @@ import { defaultMeta } from "../data/socials";
 import { readFile } from "node:fs/promises";
 import satori, { type SatoriOptions } from "satori";
 
-const BASE64_LOGO =
-  "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAFjSURBVHgB7ZY9TsNAEIXf2G6gygEIbIWSjgaSMtyAGwAnIJwg4QTACThCcgNcEtNQ2Sk3PoG7VGRYWwmy5Ni7kdayIvlr8rPPO0/2vPECLS0NQ6bCi/5gpj6usouYbuXyS+bXRW8omPgz/c4MP14uHk329WBOJ62j0WTrRFrdPw4apnEDhzyCQxDd3vWDTuQSJUYGVINNGDyCOcIh50OrUs2sNSD6gydVfArLqPg9qyT5lT1w1huOGHiDZVRcX2S0yPYtNZDm2nU2M9guDrzHYTDd/fbKimdDhakDu+XncRSM8/8U7oAQo852ognYRdL6tDAdCwb4ZF1P8XR8Sz9BlYHz/uAV23lvDeJk37ujYCDNuorGGJYhcGnxlKwJa816+P1TpfG6lzd3dWV9FQbafT3XBX55o313q9E6gXlz+vmsVxqQUTA3EaoDyT3sp6M9DxzRgYSZV0QkNbLdeoKWlmPhDzzzc3Jz944vAAAAAElFTkSuQmCC";
-
 export interface OgData {
   title: string;
   date: Date;
@@ -24,7 +21,7 @@ const Template = (props: OgData) => (
       backgroundImage:
         "radial-gradient(circle at 25px 25px, lightgray 2%, transparent 0%), radial-gradient(circle at 75px 75px, lightgray 2%, transparent 0%)",
       backgroundSize: "100px 100px",
-      fontFamily: "JetBrainsMono-Bold",
+      fontFamily: "IBM Plex Mono",
     }}
   >
     <div
@@ -57,7 +54,6 @@ const Template = (props: OgData) => (
             color: "#374151",
             flex: 1,
             display: "flex",
-            fontFamily: "PlusJakartaSans",
           }}
         >
           {props.title}
@@ -82,7 +78,6 @@ const Template = (props: OgData) => (
           </div>
           <div style={{ display: "flex", alignItems: "center" }}>
             <span style={{ marginRight: "16px" }}>Sentinels Robotics</span>
-            <img src={BASE64_LOGO} width={24} height={24} />
           </div>
         </div>
       </div>
@@ -112,25 +107,44 @@ export const getOgImagePath = (filename: string = defaultMeta.title) => {
  *
  * @param text
  */
+
+const fetchFonts = async () => {
+  // Regular Font
+  const fontFileRegular = await fetch(
+    "https://www.1001fonts.com/download/font/ibm-plex-mono.regular.ttf",
+  );
+  const fontRegular: ArrayBuffer = await fontFileRegular.arrayBuffer();
+
+  // Bold Font
+  const fontFileBold = await fetch(
+    "https://www.1001fonts.com/download/font/ibm-plex-mono.bold.ttf",
+  );
+  const fontBold: ArrayBuffer = await fontFileBold.arrayBuffer();
+
+  return { fontRegular, fontBold };
+};
+
+const { fontRegular, fontBold } = await fetchFonts();
+
 const generateOgImage = async (
   text: string = defaultMeta.title,
   date: Date = new Date(),
 ): Promise<Buffer> => {
   const options: SatoriOptions = {
-    width: 600,
-    height: 315,
+    width: 1200,
+    height: 630,
     embedFont: true,
     fonts: [
       {
-        name: "JetBrainsMono",
-        data: await readFile("./src/assets/font/JetBrainsMono-Bold.ttf"),
-        weight: 600,
+        name: "IBM Plex Mono",
+        data: fontRegular,
+        weight: 400,
         style: "normal",
       },
       {
-        name: "PlusJakartaSans",
-        data: await readFile("./src/assets/font/PlusJakartaSans-Bold.ttf"),
-        weight: 900,
+        name: "IBM Plex Mono",
+        data: fontBold,
+        weight: 600,
         style: "normal",
       },
     ],
