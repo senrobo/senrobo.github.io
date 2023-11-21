@@ -32,12 +32,6 @@ At first, we performed polishing in a similar way to how did sanding, except we 
 ![Alt text](/polished-mirror.webp)
 *Polished mirror*
 
-<br>
-
-<iframe width="768" height="432" src="https://www.youtube.com/embed/EE-xtCF3T94?si=JedWFWiKZkAeZE9O" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-*Guess that Pokemon!*
-
 ## Conclusion
 
 It saves quite alot of time by selecting the polishing option when purchasing your mirror with JLCPCB, but depends on whether you hae the budget. If not, you can sand the mirror manually in a similar way to polishing, starting from a low grit (around 150) and slowly working your way up to 3000 grit. Ensure that the rough lines on the mirror are in a circular fashion, which indicates evenness in the sanding, which will produce a good even image when all is done. Don't be afraid to use alot of mirror polish during polishing because you may have to go through many rounds of polishing to achieve a perfect image. It is very important to sand and polish the whole mirror evenly so that you don't get regions that are extremely shiny and regions that are duller. You can do this by occasionally checking the mirror and selectively applying pressure to certain parts of the mirror.
