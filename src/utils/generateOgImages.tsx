@@ -23,6 +23,7 @@ const Template = (props: OgData) => (
       letterSpacing: -1,
       fontWeight: 700,
       textAlign: "center",
+      fontFamily: "sans-serif",
     }}
   >
     <div
@@ -34,7 +35,7 @@ const Template = (props: OgData) => (
         fontSize: 50,
       }}
     >
-      Fuck
+      {props.title}
     </div>
     <div
       style={{
@@ -70,24 +71,6 @@ export const getOgImagePath = (filename: string = defaultMeta.title) => {
  * @param text
  */
 
-const fetchFonts = async () => {
-  // Regular Font
-  const fontFileRegular = await fetch(
-    "https://www.1001fonts.com/download/font/ibm-plex-mono.regular.ttf",
-  );
-  const fontRegular: ArrayBuffer = await fontFileRegular.arrayBuffer();
-
-  // Bold Font
-  const fontFileBold = await fetch(
-    "https://www.1001fonts.com/download/font/ibm-plex-mono.bold.ttf",
-  );
-  const fontBold: ArrayBuffer = await fontFileBold.arrayBuffer();
-
-  return { fontRegular, fontBold };
-};
-
-const { fontRegular, fontBold } = await fetchFonts();
-
 const generateOgImage = async (
   text: string = defaultMeta.title,
   date: Date = new Date(),
@@ -96,20 +79,7 @@ const generateOgImage = async (
     width: 600,
     height: 315,
     embedFont: false,
-    fonts: [
-      {
-        name: "IBM Plex Mono",
-        data: fontRegular,
-        weight: 400,
-        style: "normal",
-      },
-      {
-        name: "IBM Plex Mono",
-        data: fontBold,
-        weight: 600,
-        style: "normal",
-      },
-    ],
+    fonts: [],
   };
 
   const svg = await satori(
