@@ -96,8 +96,8 @@ const generateOgImage = async (
   date: Date = new Date(),
 ): Promise<Buffer> => {
   const options: SatoriOptions = {
-    width: 1200,
-    height: 630,
+    width: 600,
+    height: 315,
     embedFont: true,
     fonts: [
       {

@@ -1,6 +1,6 @@
 import { defaultMeta } from "../../data/socials";
 import generateOgImage, { type OgData } from "../../utils/generateOgImages";
-import { type CollectionEntry, getCollection } from "astro:content";
+import { getCollection } from "astro:content";
 import type { APIRoute, GetStaticPaths, GetStaticPathsItem } from "astro";
 
 interface StaticPaths extends OgData {
@@ -10,12 +10,12 @@ interface StaticPaths extends OgData {
 const STATIC_PATH: StaticPaths[] = [
   {
     slug: defaultMeta.title,
-    title: `${defaultMeta.title} : Blog and Project showcase`,
+    title: `${defaultMeta.title}`,
     date: new Date(),
   },
   {
     slug: "blog",
-    title: "Blogs: I was there when it was written",
+    title: "Blogs",
     date: new Date(),
   },
 ];
