@@ -1,6 +1,5 @@
 import sharp from "sharp";
 import { defaultMeta } from "../data/socials";
-import { readFile } from "node:fs/promises";
 import satori, { type SatoriOptions } from "satori";
 
 export interface OgData {
@@ -14,73 +13,39 @@ export interface OgData {
 const Template = (props: OgData) => (
   <div
     style={{
+      display: "flex",
       height: "100%",
       width: "100%",
-      display: "flex",
-      backgroundColor: "white",
-      backgroundImage:
-        "radial-gradient(circle at 25px 25px, lightgray 2%, transparent 0%), radial-gradient(circle at 75px 75px, lightgray 2%, transparent 0%)",
-      backgroundSize: "100px 100px",
-      fontFamily: "IBM Plex Mono",
+      alignItems: "center",
+      justifyContent: "center",
+      flexDirection: "column",
+      backgroundImage: "linear-gradient(to bottom, #dbf4ff, #fff1f1)",
+      letterSpacing: -1,
+      fontWeight: 700,
+      textAlign: "center",
     }}
   >
     <div
       style={{
-        padding: "20px",
-        display: "flex",
-        width: "100%",
-        height: "100%",
-        justifyContent: "center",
+        backgroundImage:
+          "linear-gradient(90deg, rgb(0, 124, 240), rgb(0, 223, 216))",
+        backgroundClip: "text",
+        color: "transparent",
+        fontSize: 50,
       }}
     >
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "space-between",
-          border: "1px solid #374151",
-          boxShadow: "5px 5px 0px #374151",
-          width: "100%",
-          height: "100%",
-          padding: "10px",
-        }}
-      >
-        <div
-          style={{
-            fontSize: "32px",
-            fontWeight: "900",
-            lineHeight: "3rem",
-            padding: "10px 0 50px 0",
-            color: "#374151",
-            flex: 1,
-            display: "flex",
-          }}
-        >
-          {props.title}
-        </div>
-        <div
-          style={{
-            fontSize: "16px",
-            fontWeight: "900",
-            color: "#374151",
-            display: "flex",
-            flexDirection: "row",
-            justifyContent: "space-between",
-            alignItems: "center",
-          }}
-        >
-          <div>
-            {props.date.toLocaleDateString("en-US", {
-              year: "numeric",
-              month: "long",
-              day: "numeric",
-            })}
-          </div>
-          <div style={{ display: "flex", alignItems: "center" }}>
-            <span style={{ marginRight: "16px" }}>Sentinels Robotics</span>
-          </div>
-        </div>
-      </div>
+      {props.title}
+    </div>
+    <div
+      style={{
+        backgroundImage:
+          "linear-gradient(90deg, rgb(121, 40, 202), rgb(255, 0, 128))",
+        backgroundClip: "text",
+        color: "transparent",
+        fontSize: 24,
+      }}
+    >
+      Sentinels Robotics
     </div>
   </div>
 );
