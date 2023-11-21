@@ -83,7 +83,7 @@ const generateOgImage = async (
     fonts: [
       {
         name: "Inter",
-        data: await readFile("./src/assets/font/Inter-Regular.ttf"),
+        data: await readFile("./src/assets/font/Inter-Bold.ttf"),
         weight: 400,
         style: "normal",
       },
