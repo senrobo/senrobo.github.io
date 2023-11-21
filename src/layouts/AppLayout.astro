@@ -3,6 +3,7 @@ import Link from "../components/Link.astro";
 import navigation from "../data/navigation.json";
 import { author, defaultMeta } from "../data/socials.ts";
 import "@fontsource-variable/inter";
+import { getOgImagePath } from "../utils/generateOgImages";
 
 interface Props {
   title: string;
@@ -21,7 +22,8 @@ const {
   pubDate,
 } = Astro.props;
 
-const ogImageURL = new URL(ogImage.src, Astro.site).href;
+const ogImageURL = new URL(getOgImagePath(Astro.url.pathname), Astro.url.origin)
+  .href;
 const canonicalURL = new URL(Astro.url).href;
 ---
 
