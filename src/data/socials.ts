@@ -7,4 +7,5 @@ export const defaultMeta = {
     src: "/images/banner.webp",
     alt: "Sentinels Robotics",
   },
+  wesbite: "https://senrobo.github.io",
 };
