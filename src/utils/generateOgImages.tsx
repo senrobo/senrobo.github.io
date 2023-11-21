@@ -1,5 +1,5 @@
 import sharp from "sharp";
-import { defaultMeta } from "@/data/socials";
+import { defaultMeta } from "../data/socials";
 import { readFile } from "node:fs/promises";
 import satori, { type SatoriOptions } from "satori";
 
