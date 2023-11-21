@@ -1,89 +1,79 @@
-import { defaultMeta } from "@/data/socials";
+export interface OgData {
+  title: string;
+  date: Date;
+}
 
-export default () => {
-  return (
+const Template = (props: OgData) => (
+  <div
+    style={{
+      height: "100%",
+      width: "100%",
+      display: "flex",
+      backgroundColor: "white",
+      backgroundImage:
+        "radial-gradient(circle at 25px 25px, lightgray 2%, transparent 0%), radial-gradient(circle at 75px 75px, lightgray 2%, transparent 0%)",
+      backgroundSize: "100px 100px",
+      fontFamily: "JetBrainsMono-Bold",
+    }}
+  >
     <div
       style={{
-        background: "#fefbfb",
+        padding: "20px",
+        display: "flex",
         width: "100%",
         height: "100%",
-        display: "flex",
-        alignItems: "center",
         justifyContent: "center",
       }}
     >
       <div
         style={{
-          position: "absolute",
-          top: "-1px",
-          right: "-1px",
-          border: "4px solid #000",
-          background: "#ecebeb",
-          opacity: "0.9",
-          borderRadius: "4px",
           display: "flex",
-          justifyContent: "center",
-          margin: "2.5rem",
-          width: "88%",
-          height: "80%",
-        }}
-      />
-
-      <div
-        style={{
-          border: "4px solid #000",
-          background: "#fefbfb",
-          borderRadius: "4px",
-          display: "flex",
-          justifyContent: "center",
-          margin: "2rem",
-          width: "88%",
-          height: "80%",
+          flexDirection: "column",
+          justifyContent: "space-between",
+          border: "1px solid #374151",
+          boxShadow: "5px 5px 0px #374151",
+          width: "100%",
+          height: "100%",
+          padding: "10px",
         }}
       >
         <div
           style={{
+            fontSize: "32px",
+            fontWeight: "900",
+            lineHeight: "3rem",
+            padding: "10px 0 50px 0",
+            color: "#374151",
+            flex: 1,
             display: "flex",
-            flexDirection: "column",
-            justifyContent: "space-between",
-            margin: "20px",
-            width: "90%",
-            height: "90%",
+            fontFamily: "PlusJakartaSans",
           }}
         >
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-              alignItems: "center",
-              height: "90%",
-              maxHeight: "90%",
-              overflow: "hidden",
-              textAlign: "center",
-            }}
-          >
-            <p style={{ fontSize: 72, fontWeight: "bold" }}>
-              {defaultMeta.title}
-            </p>
-            <p style={{ fontSize: 28 }}>{defaultMeta.description}</p>
+          {props.title}
+        </div>
+        <div
+          style={{
+            fontSize: "16px",
+            fontWeight: "900",
+            color: "#374151",
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "space-between",
+            alignItems: "center",
+          }}
+        >
+          <div>
+            {props.date.toLocaleDateString("en-US", {
+              year: "numeric",
+              month: "long",
+              day: "numeric",
+            })}
           </div>
-
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "flex-end",
-              width: "100%",
-              marginBottom: "8px",
-              fontSize: 28,
-            }}
-          >
-            <span style={{ overflow: "hidden", fontWeight: "bold" }}>
-              {new URL(defaultMeta.wesbite).hostname}
-            </span>
+          <div style={{ display: "flex", alignItems: "center" }}>
+            <span style={{ marginRight: "16px" }}>Sentinels Robotics</span>
           </div>
         </div>
       </div>
     </div>
-  );
-};
+  </div>
+);
