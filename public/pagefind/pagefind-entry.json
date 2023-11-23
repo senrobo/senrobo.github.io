@@ -1,6 +1,1 @@
-{
-  "version": "1.0.3",
-  "languages": {
-    "en": { "hash": "en_ad3b8fbcda", "wasm": "en", "page_count": 2 }
-  }
-}
+{"version":"1.0.4","languages":{"en":{"hash":"en_f460dbc91e","wasm":"en","page_count":5}}}
