@@ -23,7 +23,7 @@ jobs:
           node-version: "16" # specify the Node.js version
 
       - name: Install dependencies
-        run: npm ci
+        run: npm i
 
       - name: Build the project
         run: npm run build
