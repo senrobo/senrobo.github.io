@@ -44,7 +44,7 @@ const Template = (props: OgData) => (
         fontSize: 24,
       }}
     >
-      Sen Robo
+      Sentinels Robotics
     </div>
   </div>
 );
