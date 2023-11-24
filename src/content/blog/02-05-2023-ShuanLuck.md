@@ -2,7 +2,7 @@
 title: "Drive System"
 description: "Choice of main motors and considerations"
 pubDate: "May 02 2023"
-heroImage: "/blog-placeholder-7.jpg"
+heroImage: "/blog-placeholder-7.png"
 author: "Sim Shuan Luck"
 ---
 
