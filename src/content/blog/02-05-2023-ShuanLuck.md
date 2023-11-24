@@ -22,7 +22,7 @@ This is a classic motor that is reliable. The 12v version with a 1:20 gear ratio
 
 Joinmax is very commonly used amongst RCJ teams. It has a no-load speed of 1700rpm, and a stall torque of 20 kg.cm. However, Sentinels has had problems with this motor when coempeting in the lightweight section in the 2023 RCJ season, with the motor only operating within a narrow current range. 
 
-3 - [<ins>Pololu 4:1 Metal Gearmotor 25Dx50L mm HP 12V</ins>](https://www.pololu.com/product/3203){:target="_blank"}
+3 - [<ins>Pololu 4:1 Metal Gearmotor 25Dx50L mm HP 12V</ins>](https://www.pololu.com/product/3203)
 
 This pololu motor was the only one that was even close to the performance of the chihai. It had a slightly higher stall torque of 7.4 kg.cm, but the no-load speed was significantly lower at 500rpm. 
 
