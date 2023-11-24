@@ -2,7 +2,7 @@
 title: "Dribbler"
 description: "Allows the robot to have a stronger grip on the ball"
 pubDate: "Oct 29 2023"
-heroImage: "/dribbler-header.webp"
+heroImage: "/dribber-header.webp"
 author: "Sim Shuan Luck"
 ---
 
