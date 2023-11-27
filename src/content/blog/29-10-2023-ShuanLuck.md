@@ -53,7 +53,7 @@ One other problem we observed during testing was that when the ball comes into t
 
 We created a pivot point behind the centre of mass of the dribbler, so that the weight of the dribbler can act on the ball, providing enough grip. 
 
-A spring is then added to dampen the force when the ball enters the dribbler, and it also erases major vibrations, for smoother dribbling. 
+A spring is then added to dampen the force when the ball enters the dribbler, and it also erases major vibrations, for smoother dribbling. We have been experimenting with a random spring we found in the lab but it seems that it doesn't solve the vibration problem, so we have bought a few from taobao and hopefully they work.
 
 ## Manufacturing
 
