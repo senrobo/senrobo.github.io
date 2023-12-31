@@ -40,11 +40,11 @@ const Template = (props: OgData) => (
     </div>
     <div
       style={{
-        color: "rgb(20,184,166)",
-        fontSize: 24,
+        color: "#FBFBFB",
+        fontSize: 20,
       }}
     >
-      Sen Robo
+      Sentinels Robotics
     </div>
   </div>
 );
