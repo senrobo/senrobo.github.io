@@ -10,7 +10,7 @@ import react from "@astrojs/react";
 const astroExpressiveCodeOptions = {
   // Example: Change the themes
   styleOverrides: {
-    codeFontSize: "1rem",
+    codeFontSize: "0.9rem",
     codeFontFamily: "Menlo, monospace",
   },
 };
