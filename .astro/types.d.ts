@@ -185,6 +185,13 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"blog": {
+"02-05-2023-ShuanLuck.md": {
+	id: "02-05-2023-ShuanLuck.md";
+  slug: "02-05-2023-shuanluck";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "12-06-2023-Vincent.md": {
 	id: "12-06-2023-Vincent.md";
   slug: "12-06-2023-vincent";
@@ -213,6 +220,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"18-9-2023-Vincent.md": {
+	id: "18-9-2023-Vincent.md";
+  slug: "18-9-2023-vincent";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "21-11-2023-ShuanLuck.md": {
 	id: "21-11-2023-ShuanLuck.md";
   slug: "21-11-2023-shuanluck";
@@ -223,6 +237,34 @@ declare module 'astro:content' {
 "23-11-2023-Vincent.md": {
 	id: "23-11-2023-Vincent.md";
   slug: "23-11-2023-vincent";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"24-11-2023 David.md": {
+	id: "24-11-2023 David.md";
+  slug: "24-11-2023-david";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"24-11-2023-David1.md": {
+	id: "24-11-2023-David1.md";
+  slug: "24-11-2023-david1";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"29-10-2023-ShuanLuck.md": {
+	id: "29-10-2023-ShuanLuck.md";
+  slug: "29-10-2023-shuanluck";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"31-12-2023-Vincent.md": {
+	id: "31-12-2023-Vincent.md";
+  slug: "31-12-2023-vincent";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
