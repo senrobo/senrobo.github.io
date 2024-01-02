@@ -29,10 +29,7 @@ const Template = (props: OgData) => (
   >
     <div
       style={{
-        backgroundImage:
-          "linear-gradient(90deg, rgb(20,184,166), rgb(59,130,246),rgb(168,85,247))",
-        backgroundClip: "text",
-        color: "transparent",
+        color: "#FBFBFB",
         fontSize: 50,
       }}
     >
