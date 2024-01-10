@@ -34,13 +34,19 @@ RCJ teams with higher funding usually use maxon motors, because it has a high pe
 
 In the end, we choose the chihai, because it specs are pretty average while meeting our needs, and is reliable. We chose the version without the encoders due to the lack of space.
 
-![Alt text](/chihai-motor.webp)
+<figure>
+  <img src="/chihai-motor.webp" alt="Chihai Motor" style="width:100%">
+  <figcaption align = "center" ><i><b>Chihai Motor</b></i></figcaption>
+</figure>
 
 ## Motor Arrangement
 
 We arranged the 4 motors in a split cross fashion, to allow for more space for the kicker and dribbler. However, due to the motor length, we had to resort to an angle of 56 degrees, which is not ideal, but it is still able to support the robot well.
 
-<figure><img src="/layer1-outline.webp" alt="Layer 1 Outline" style="width:100%"> <figcaption align = "center" ><i><b>Layer 1 outlin</b></i></figcaption></figure>
+<figure>
+  <img src="/layer1-outline.webp" alt="Layer 1 Outline" style="width:100%">
+  <figcaption align = "center" ><i><b>Layer 1 outlin</b></i></figcaption>
+</figure>
 
 ## Accomodations Made
 
@@ -48,8 +54,12 @@ In order to accomodate the length of the chihai motor, we had to switch our sole
 
 > Place robot inside the left corner of a goal. Perform a kick into the opposing goal. The Open League kicker power test is passed if after bouncing off of the opposite goal the ball does not return further than the front line of to the penalty area it was shot from.
 
-![Alt text](/kk-1040b.webp)
-_KK-1040B_
+<figure>
+  <img src="/kk-1040b.webp" alt="KK-1040B" style="width:100%">
+  <figcaption align = "center" ><i><b>KK-1040B</b></i></figcaption>
+</figure>
 
-![Alt text](/kk-1039b.webp)
-_KK-1039B_
+<figure>
+  <img src="/kk-1039b.webp" alt="KK-1039B" style="width:100%">
+  <figcaption align = "center" ><i><b>KK-1039B</b></i></figcaption>
+</figure>
