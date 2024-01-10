@@ -45,7 +45,7 @@ We arranged the 4 motors in a split cross fashion, to allow for more space for t
 
 <figure>
   <img src="/layer1-outline.webp" alt="Layer 1 Outline" style="width:100%">
-  <figcaption align = "center" ><i><b>Layer 1 outlin</b></i></figcaption>
+  <figcaption align = "center" ><i><b>Layer 1 Outline</b></i></figcaption>
 </figure>
 
 ## Accomodations Made
