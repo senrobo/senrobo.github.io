@@ -16,15 +16,15 @@ We had a few motor brands and models to choose from. Here are the more prominent
 
 1 - Chihai CHR-GM25-370ABHL
 
-This is a classic motor that is reliable. The 12v version with a 1:20 gear ratio has a no-load speed of 600rpm, rated torque of 35 kg.cm, stall torque of 7.0 kg.cm, and a total length of only 50mm. 
+This is a classic motor that is reliable. The 12v version with a 1:20 gear ratio has a no-load speed of 600rpm, rated torque of 35 kg.cm, stall torque of 7.0 kg.cm, and a total length of only 50mm.
 
 2 - Joinmax JMP-BE-3561
 
-Joinmax is very commonly used amongst RCJ teams. It has a no-load speed of 1700rpm, and a stall torque of 20 kg.cm. However, Sentinels has had problems with this motor when coempeting in the lightweight section in the 2023 RCJ season, with the motor only operating within a narrow current range. 
+Joinmax is very commonly used amongst RCJ teams. It has a no-load speed of 1700rpm, and a stall torque of 20 kg.cm. However, Sentinels has had problems with this motor when coempeting in the lightweight section in the 2023 RCJ season, with the motor only operating within a narrow current range.
 
 3 - [<ins>Pololu 4:1 Metal Gearmotor 25Dx50L mm HP 12V</ins>](https://www.pololu.com/product/3203)
 
-This pololu motor was the only one that was even close to the performance of the chihai. It had a slightly higher stall torque of 7.4 kg.cm, but the no-load speed was significantly lower at 500rpm. 
+This pololu motor was the only one that was even close to the performance of the chihai. It had a slightly higher stall torque of 7.4 kg.cm, but the no-load speed was significantly lower at 500rpm.
 
 4 - Maxon Motors
 
@@ -32,16 +32,15 @@ RCJ teams with higher funding usually use maxon motors, because it has a high pe
 
 ## Choice of Motor
 
-In the end, we choose the chihai, because it specs are pretty average while meeting our needs, and is reliable. We chose the version without the encoders due to the lack of space. 
+In the end, we choose the chihai, because it specs are pretty average while meeting our needs, and is reliable. We chose the version without the encoders due to the lack of space.
 
 ![Alt text](/chihai-motor.webp)
 
 ## Motor Arrangement
 
-We arranged the 4 motors in a split cross fashion, to allow for more space for the kicker and dribbler. However, due to the motor length, we had to resort to an angle of 56 degrees, which is not ideal, but it is still able to support the robot well. 
+We arranged the 4 motors in a split cross fashion, to allow for more space for the kicker and dribbler. However, due to the motor length, we had to resort to an angle of 56 degrees, which is not ideal, but it is still able to support the robot well.
 
-![Alt text](/layer1-outline.webp)
-*Layer 1 outline*
+<figure><img src="/layer1-outline.webp" alt="Layer 1 Outline" style="width:100%"> <figcaption align = "center" ><i><b>Layer 1 outlin</b></i></figcaption></figure>
 
 ## Accomodations Made
 
@@ -50,7 +49,7 @@ In order to accomodate the length of the chihai motor, we had to switch our sole
 > Place robot inside the left corner of a goal. Perform a kick into the opposing goal. The Open League kicker power test is passed if after bouncing off of the opposite goal the ball does not return further than the front line of to the penalty area it was shot from.
 
 ![Alt text](/kk-1040b.webp)
-*KK-1040B*
+_KK-1040B_
 
 ![Alt text](/kk-1039b.webp)
-*KK-1039B*
+_KK-1039B_
